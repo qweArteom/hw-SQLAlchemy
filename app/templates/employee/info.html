@@ -1,0 +1,13 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<h1>Інформація про Працівника: "{{ employee }}"</h1>
+<h2>ID: {{ employee.id }}</h2>
+<h2>Зарплата: <em>{{ employee.salary }}</em></h2>
+<h2>Вік: {{ employee.age }}</h2>
+
+<h2>Посади: </h2>
+{% for position in employee.positions %}
+    <h3>{{ position }}, </h3>
+{% endfor %}
+{% endblock content %}
